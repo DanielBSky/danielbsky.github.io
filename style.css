@@ -1,0 +1,235 @@
+/* html {
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+} */
+
+@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT|Yanone+Kaffeesatz:300);
+html {
+    display: block;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 5em 2em;
+    grid-template-rows: auto 200px auto auto;
+}
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #111;
+    font-size: calc(14px + .25vw);
+    position: relative;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+::selection {
+    background: #feda00;
+}
+
+.main-header {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+.main-header {
+    padding: 1.5em 0 .5em;
+    font-size: 16px;
+    background: rgba(255,255,255,.8);
+}
+.main-header {
+    grid-row: 1;
+    grid-column: 1/13;
+}
+.logo a {
+    display: block;
+    border: none;
+    overflow: hidden;
+}
+.logo {
+    grid-column: 2/4;
+    display: inline-block;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 35px;
+    border-bottom: 1px solid;
+    padding-left: 10px;
+    white-space: nowrap;
+}
+.logo :hover {
+    background: #feda00;
+}
+a {
+    color: inherit;
+    outline: 0;
+    transition: all .2s ease-out;
+    /* text-decoration-skip: ink; */
+}
+
+.main-nav {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    grid-column: 4/12;
+    overflow: hidden;
+    border-bottom: 1px solid;
+}
+.main-nav__list {
+    display: flex;
+}
+.main-nav__list {
+    list-style: none;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+.main-nav__item {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: all .3s ease-out;
+    font-size: 16px;
+}
+
+.main-nav__item a {
+    display: block;
+    font-weight: 400;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding: 1em 1em 1em 1.5em;;
+    font-family: 'Open Sans Condensed', sans-serif;
+    /* transition: all .3s linear; */
+    border: none;
+    color: inherit;
+    /* transition: color .3s linear; */
+}
+.main-nav__item :hover {
+    background: #feda00;
+}
+#zakorutch {
+    grid-column: 3/11;
+    grid-row: 2;
+    
+    /* text-align: center; */
+    
+}
+
+
+.simple-arrow-right {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 0 12px 34px;
+    border-color: transparent transparent transparent #d5d5d5;
+}
+.arrow-left-cont {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+.simple-arrow-left{
+    /* opacity: 0.5; */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 34px 12px 0;
+    border-color: transparent #d5d5d5 transparent transparent;
+}
+
+
+.simple-arrow-right:hover {
+    border-left-color: #feda00;
+    cursor: pointer;
+} 
+.simple-arrow-left:hover {
+    border-right-color: #feda00;
+    cursor: pointer;
+} 
+.play-rect {
+    width: 34px;
+    height: 32px;
+    border: 3px solid #b3b3b3;
+}
+.play-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 0 12px 34px;
+    border-color: transparent transparent transparent #d5d5d5;
+}
+
+.play-arrow:hover{
+    cursor: pointer;
+    border-left-color: #feda00;
+}
+.play-arrow {
+    color: #feda00;
+    outline: 0;
+    transition: all .2s ease-out;
+}
+
+.stopBtn {
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-color: #b3b3b3;
+}
+.simple-arrow-right, .simple-arrow-left{
+    color: #feda00;
+    outline: 0;
+    transition: all .2s ease-out;
+    /* text-decoration-skip: ink; */
+}
+
+.selectPlay {
+    border-left-color: #feda00;
+}
+
+/* .arrow {
+	position: absolute;
+	top: 50%;
+	width: 3vmin;
+	height: 3vmin;
+	background: transparent;
+	border-top: 1vmin solid white;
+	border-right: 1vmin solid white;
+	box-shadow: 0 0 0 lightgray;
+	transition: all 200ms ease;
+}
+	.arrow .left {
+		left: 0;
+        transform: translate3d(0,-50%,0) rotate(-135deg);
+	}
+
+	.arrow .right {
+		right: 0;
+		transform: translate3d(0,-50%,0) rotate(45deg);
+	}
+	
+	:hover {
+		border-color: orange;
+		box-shadow: 0.5vmin -0.5vmin 0 white;
+	}
+	
+	.arrow :before { 
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-40%,-60%) rotate(45deg);
+		width: 200%;
+		height: 200%;
+	} */
